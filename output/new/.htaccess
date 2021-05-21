@@ -1,1 +1,2 @@
 # dummy new
+Redirect 302 . /one
