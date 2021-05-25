@@ -1,3 +1,3 @@
 # dummy new
-Redirect 302 . /one
-Redirect 302 / /two
+Redirect 302 one /one
+Redirect 302 two /two
