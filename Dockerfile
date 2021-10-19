@@ -30,7 +30,7 @@
 #
 
 # Build CMark
-FROM python:3.9.5-slim-buster as cmark
+FROM python:3.10.0rc1-slim-buster as cmark
 
 RUN apt update && apt upgrade -y
 RUN apt install git curl cmake build-essential -y
@@ -45,7 +45,7 @@ RUN ./infrastructure-pelican/bin/build-cmark.sh | grep LIBCMARKDIR > LIBCMARKDIR
 RUN echo "export PELICANASF='/tmp/build-cmark/infrastructure-pelican/plugins/'" >> LIBCMARKDIR.sh
 
 # Standard Pelican stuff
-FROM python:3.9.5-slim-buster
+FROM python:3.10.0rc1-slim-buster
 
 RUN apt update && apt upgrade -y
 RUN apt install wget unzip fontconfig -y
